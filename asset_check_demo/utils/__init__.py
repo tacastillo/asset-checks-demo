@@ -27,7 +27,7 @@ def write_to_daily_report(df: pd.DataFrame, date: str):
 
         updated_data.to_csv(ORDER_CSV_REPORT_PATH, index=False)
 
-def get_metadata_for_asset(context: AssetExecutionContext, asset_name: str):
+def get_metadata_for_asset(context, asset_name: str):
     records = context.instance.get_event_records(
         EventRecordsFilter(
             event_type=DagsterEventType.ASSET_MATERIALIZATION, asset_key=AssetKey(asset_name)
