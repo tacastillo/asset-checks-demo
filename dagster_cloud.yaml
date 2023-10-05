@@ -1,4 +1,4 @@
 locations:
   - location_name: assetcheckdemo
     code_source:
-      package_name: asset-checks-demo
+      package_name: asset_check_demo
