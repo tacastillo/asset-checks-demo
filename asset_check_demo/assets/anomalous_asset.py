@@ -40,7 +40,7 @@ def daily_sales_report(context: AssetExecutionContext) -> MaterializeResult:
     asset=daily_sales_report
 )
 def no_anamoly_days(context):
-    metadata_records = utils.get_metadata_for_asset(context, "daily_sales_report")
+    metadata_records = utils.get_sales_metadata_for_asset(context, "daily_sales_report")
 
     mean = statistics.mean(metadata_records.values())
     stdev = statistics.stdev(metadata_records.values())
